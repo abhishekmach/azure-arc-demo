@@ -16,7 +16,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -36,7 +36,7 @@ metadata:
   labels:
     app: nginx
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   externalTrafficPolicy: Local
   ports:
